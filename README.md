@@ -4,3 +4,6 @@
 
 ### Feito até o momento
  * Lista encadeada
+ * Árvore binária
+ * Boggo Sort
+ * Insertion Sort
