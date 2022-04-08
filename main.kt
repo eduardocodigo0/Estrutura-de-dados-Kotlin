@@ -1,13 +1,24 @@
 
 fun main(){
-    val list = arrayListOf<Int>(7,20,14,12,2,9,10,4,16,5,0,17,19,8,18,1,11,6,3,13,15)
-    val algorithms = SortingAlgorithms()
+    val cache = LRUCache<String, Int>(3)
 
-    println("Starting Sort")
-    val begin = System.nanoTime()
+    cache.setValue("a", 1)
+    cache.setValue("b", 2)
+    cache.setValue("c", 3)
+    cache.setValue("d", 4)
+    println(cache.getValue("b"))
+    cache.setValue("e", 5)
+    cache.setValue("f", 6)
+    println(cache.getValue("b"))
+    cache.setValue("g", 7)
+    cache.setValue("f", 12)
 
-    println(algorithms.insertionSort(list))
 
-    val end = System.nanoTime()
-    println("Sort algorithm Execution Time: ${end-begin} nanoseconds")
+    println(cache.getValue("a"))
+    println(cache.getValue("b"))
+    println(cache.getValue("c"))
+    println(cache.getValue("d"))
+    println(cache.getValue("e"))
+    println(cache.getValue("f"))
+    println(cache.getValue("g"))
 }
